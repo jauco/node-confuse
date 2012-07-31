@@ -20,7 +20,11 @@ module.exports = function (opts) {
         }).concat(prefix + '.json')
     ;
     
-    var dirs = parents(opts.dir || path.dirname(require.main.filename));
+    var dirs = parents(opts.dir || (
+        require.main
+            ? path.dirname(require.main.filename)
+            : process.cwd()
+    ));
     var configFiles = dirs
         .map(function (dir) {
             for (var i = 0; i < files.length; i++) {

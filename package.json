@@ -1,6 +1,6 @@
 {
     "name" : "confuse",
-    "version" : "0.0.0",
+    "version" : "0.0.1",
     "description" : "merge arguments and config files recursively up a directory tree",
     "main" : "index.js",
     "bin" : {},
