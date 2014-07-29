@@ -10,7 +10,7 @@ test('env', function (t) {
         };
     }
     
-    t.same(confuse(config()), {
+    t.same(confuse(config("")), {
         W: 777, q: { w: 7 }, n: 3
     });
     t.same(confuse(config('foo')), {
@@ -34,7 +34,7 @@ test('array env', function (t) {
         };
     }
     
-    t.same(confuse(config()), {
+    t.same(confuse(config("")), {
         W: 777, q: { w: 7 }, n: 3
     });
     t.same(confuse(config('foo')), {
