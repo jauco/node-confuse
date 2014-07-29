@@ -7,7 +7,7 @@ var optimist = require('optimist');
 
 var exists = fs.existsSync || path.existsSync;
 
-module.exports = function (opts) {
+module.exports = function confuse(opts) {
     if (typeof opts === 'string') {
         opts = { env : opts };
     }
@@ -38,6 +38,6 @@ module.exports = function (opts) {
     if (configFiles.length === 0) return argv;
     
     return configFiles.reduce(function (config, file) {
-        return figc(file, config);
+        return figc(file, config, {mergeImplementation: opts.mergeImplementation});
     }, argv);
 };

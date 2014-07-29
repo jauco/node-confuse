@@ -10,7 +10,7 @@
     },
     "dependencies" : {
         "parents" : "~0.0.1",
-        "figc" : "~0.0.2",
+        "figc" : "git://github.com/jauco/node-figc.git",
         "optimist" : "~0.3.4"
     },
     "devDependencies" : {
